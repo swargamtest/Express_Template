@@ -24,15 +24,17 @@ app.get('/',(req,res)=>
 {
    res.render("index",
    {
-       title:'my heading',
+       title:'My heading',
        body:'My body'
    })
-//    res.send('<h1>Weather</h1>')
+//res.send('<h1>Weather</h1>')
 // res.send({
 //     forecast: 'It is snowing',
 //     location: 'Philadelphia'
-//     })
+//})
 })
+
+//Setting 404 page
 app.get('*', (req, res) => {
     res.render('404', {
     title: '404',
@@ -43,6 +45,7 @@ app.get('*', (req, res) => {
 
 
 
+//Listining to port
 app.listen(port,()=>
 {
     console.log(`Server is running in ${port}`)
